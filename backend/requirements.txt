@@ -4,4 +4,4 @@ google-generativeai
 python-dotenv
 fastapi
 uvicorn
-sentence-transformers
+
