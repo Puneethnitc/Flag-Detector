@@ -1,7 +1,5 @@
-
-
-const BASE_URL = "http://localhost:8000";
-
+const BASE_URL =
+  import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
 export async function classifyBio(bio) {
   const response = await fetch(`${BASE_URL}/classify`, {
@@ -18,7 +16,6 @@ export async function classifyBio(bio) {
 
   return response.json();
 }
-
 
 export async function rewriteBio(bio, tone = "confident") {
   const response = await fetch(`${BASE_URL}/rewrite`, {
