@@ -56,3 +56,6 @@ Frontend
 cd frontend
 npm install
 npm run dev
+
+Hosting Limitation
+The initial backend implementation used a transformer-based zero-shot classification model, which exceeded the memory limits of free-tier hosting services (512 MB RAM). As a result, the deployment process terminated due to out-of-memory errors. To maintain reliability and compatibility with free hosting, heavy local model inference was avoided in the final deployed setup.
